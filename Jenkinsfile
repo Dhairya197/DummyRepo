@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'echo \'Build\''
+        git(url: 'https://github.com/Dhairya197/DummyRepo.git', branch: 'main')
       }
     }
 
