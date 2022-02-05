@@ -4,14 +4,13 @@ pipeline {
     stage('Build') {
       steps {
         echo 'echo \'Build\''
-        sh 'mvn build'
       }
     }
 
     stage('Checkout') {
       steps {
         echo 'echo \'Checkout\''
-        git(url: 'https://github.com/Dhairya197/DummyRepo.git', branch: 'main')
+        sh 'mvn checkout'
       }
     }
 
