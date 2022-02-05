@@ -13,5 +13,28 @@ pipeline {
       }
     }
 
+    stage('Smoke Tests') {
+      steps {
+        echo 'echo \'Smoke tests\''
+      }
+    }
+
+    stage('Reports') {
+      parallel {
+        stage('Reports') {
+          steps {
+            echo 'echo \'reports\''
+          }
+        }
+
+        stage('Regression Testing') {
+          steps {
+            echo 'echo \'Regression\''
+          }
+        }
+
+      }
+    }
+
   }
 }
