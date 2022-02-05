@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="runner" project="cucumber" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.epam.bdd.StepDef.runner" incomplete="true">
+    <testsuite name="checking Add to cart feature on www.ebay.com" incomplete="true">
+      <testcase name="Validate if the guest user is able to add a product to cart." classname="checking Add to cart feature on www.ebay.com" time="53.359"/>
+      <testcase name="Validate if a registered user is able to place an order" classname="checking Add to cart feature on www.ebay.com" incomplete="true"/>
+    </testsuite>
+  </testsuite>
+</testrun>

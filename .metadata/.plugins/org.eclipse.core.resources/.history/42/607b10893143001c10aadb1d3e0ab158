@@ -1,0 +1,137 @@
+package com.epam.bdd.StepDef;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.epam.bdd.Pages.ProductPage;
+import com.epam.bdd.Pages.SearchProduct;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class AddToCart {
+
+	public WebDriver driver;
+	SearchProduct sp;
+	ProductPage pp;
+	String productname;
+	
+	
+	@Before
+	public void initDriver() {
+		System.out.println("Open browser");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dhairya_Lala\\Desktop\\onboardingWorkspace\\OnboardingProgram\\Executables\\chromedriver.exe");	
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.get("https://www.ebay.com/");
+	}
+
+	@After
+	public void teardown() {
+		System.out.println("Close browser");
+		driver.quit();
+	}
+	
+	@Given("user is logged onto the Ebay website as a guest user.")
+	public void user_is_logged_onto_the_amazon_website_as_a_guest_user() {
+
+		driver.get("https://www.ebay.com/");
+		
+	}
+
+	@When("user searches a product {string} on the homepage.")
+	public void user_searches_a_product_on_the_homepage(String string) {
+		productname=string;
+		sp=new SearchProduct(driver);
+		sp.searchProd(string);
+		
+	}
+
+	@Then("user should be able to view product information related to product searched.")
+	public void user_should_be_able_to_view_product_information_related_to_product_searched() {
+
+		sp.get_Verify_Title(productname);
+	}
+
+	@Then("user click on add to cart button")
+	public void user_click_on_add_to_cart_button() {
+
+		pp=new ProductPage(driver);
+		boolean isAddtoCartPresent=pp.isAddToCartVisible();
+	    Assert.assertTrue(isAddtoCartPresent);
+	}
+
+	@Then("user verifies if the product is added to cart")
+	public void user_verifies_if_the_product_is_added_to_cart() {
+
+		boolean isCheckoutPresent=pp.verifyCheckout();
+		Assert.assertTrue(isCheckoutPresent);
+	}
+	
+  /***************************************************************************************************/
+	
+	@Given("user is logged onto the Ebay website as a registered user")
+	public void user_is_logged_onto_the_ebay_website_as_a_registered_user() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user logs in with <username> and <password>")
+	public void user_logs_in_with_username_and_password() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("user should be able to view homepage.")
+	public void user_should_be_able_to_view_homepage() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user searches for <productID>")
+	public void user_searches_for_product_id() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user should be on the product information page.")
+	public void user_should_be_on_the_product_information_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user tried to add the product to cart")
+	public void user_tried_to_add_the_product_to_cart() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("product should be added to cart.")
+	public void product_should_be_added_to_cart() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user navigates to order confirmation page via express checkout option.")
+	public void user_navigates_to_order_confirmation_page_via_express_checkout_option() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("order should be placed successfully along with order confirmation id being generated.")
+	public void order_should_be_placed_successfully_along_with_order_confirmation_id_being_generated() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

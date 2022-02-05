@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="runner" project="cucumber" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.epam.bdd.StepDef.runner" time="28.03">
+    <testsuite name="checking Add to cart feature on www.ebay.com" time="28.03">
+      <testcase name="Validate if the guest user is able to add a product to cart." classname="checking Add to cart feature on www.ebay.com" time="14.443"/>
+      <testcase name="Validate if a registered user is able to place an order" classname="checking Add to cart feature on www.ebay.com" time="13.587">
+        <error>java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "value" is null&#13;
+	at com.epam.bdd.Pages.SearchProduct.get_Verify_Title(SearchProduct.java:47)&#13;
+	at com.epam.bdd.StepDef.AddToCart.user_should_be_able_to_view_product_information_related_to_product_searched(AddToCart.java:66)&#13;
+	at ✽.user should be able to view product information related to product searched.(file:///C:/Users/Dhairya_Lala/Desktop/onboardingWorkspace/cucumber/src/test/resources/com/epam/bdd/feature/first_Feature.feature:15)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

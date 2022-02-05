@@ -1,0 +1,17 @@
+package com.epam.bdd.cucumber;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import static io.restass
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	@Test
+    public void Test( )
+    {
+     given(). 
+    }
+}

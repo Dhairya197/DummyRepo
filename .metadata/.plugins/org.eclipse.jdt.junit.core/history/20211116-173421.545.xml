@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="runner" project="cucumber" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.epam.bdd.StepDef.runner" time="75.705">
+    <testsuite name="checking Add to cart feature on www.ebay.com" time="75.705">
+      <testcase name="Validate if the guest user is able to add a product to cart." classname="checking Add to cart feature on www.ebay.com" time="38.238"/>
+      <testcase name="Validate if a registered user is able to place an order" classname="checking Add to cart feature on www.ebay.com" time="37.467">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)&#13;
+	at com.epam.bdd.Pages.LoginPage.signin(LoginPage.java:43)&#13;
+	at com.epam.bdd.StepDef.AddToCart.user_logs_in_with_and(AddToCart.java:89)&#13;
+	at ✽.user logs in with "dhairyalala97@gmail.com" and "Mercer97@"(file:///C:/Users/Dhairya_Lala/Desktop/onboardingWorkspace/cucumber/src/test/resources/com/epam/bdd/feature/first_Feature.feature:12)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

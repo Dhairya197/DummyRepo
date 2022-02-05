@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="runner" project="cucumber" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.epam.bdd.StepDef.runner" time="140.793">
+    <testsuite name="checking Add to cart feature on www.ebay.com" time="140.793">
+      <testcase name="Validate if the guest user is able to add a product to cart." classname="checking Add to cart feature on www.ebay.com" time="80.354"/>
+      <testcase name="Validate if a registered user is able to place an order" classname="checking Add to cart feature on www.ebay.com" time="60.439">
+        <error>java.lang.NullPointerException: Cannot invoke "com.epam.bdd.Pages.SearchProduct.verifyhomepage()" because "this.sp" is null&#13;
+	at com.epam.bdd.StepDef.AddToCart.user_should_be_able_to_view_homepage(AddToCart.java:96)&#13;
+	at ✽.user should be able to view homepage.(file:///C:/Users/Dhairya_Lala/Desktop/onboardingWorkspace/cucumber/src/test/resources/com/epam/bdd/feature/first_Feature.feature:13)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

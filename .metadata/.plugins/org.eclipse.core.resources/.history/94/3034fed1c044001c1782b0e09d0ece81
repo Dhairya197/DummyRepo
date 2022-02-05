@@ -1,0 +1,16 @@
+package com.epam.bdd.cucumber;
+
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+
+public class App 
+{
+	///US/00210
+	@Test
+    public void verifyStatus()
+    {
+		given().baseUri("api.zippopotam.us")
+        .when().get("/US/00210").then().statusCode(200);
+    }
+}
